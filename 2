@@ -4,16 +4,32 @@ with open("text.txt", "w") as forca:
 with open("text.txt", "r") as ler:
    ler = ler.read()
 ler = ler.split("\n")
-print(ler[0])
+
 numero = random.randint(0,len(ler)- 1)
 ler = ler [numero]
 r = []
 for i in ler:
     r.append("_")
 print(r)
+tentativas = 0
+tentativas2 = 0
 while True:
     letra = input("Digite uma letra: ")
     for i in range(0,len(ler)):
         if letra == ler[i]:
             r[i] = letra
+        else: 
+            tentativas = tentativas + 1
+    if tentativas == len(ler):
+        tentativas2 = tentativas2 + 1
+        tentativas = 0
     print(r)
+
+    if "_" in r :
+        print()
+    
+    else: 
+        print("VOCÊ VENCEU!!")
+        break
+    if tentativas2 == 
+         
