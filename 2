@@ -1,0 +1,19 @@
+import random
+with open("text.txt", "w") as forca:
+    oi =forca.write("banana\nfutebol\ncapacete")
+with open("text.txt", "r") as ler:
+   ler = ler.read()
+ler = ler.split("\n")
+print(ler[0])
+numero = random.randint(0,len(ler)- 1)
+ler = ler [numero]
+r = []
+for i in ler:
+    r.append("_")
+print(r)
+while True:
+    letra = input("Digite uma letra: ")
+    for i in range(0,len(ler)):
+        if letra == ler[i]:
+            r[i] = letra
+    print(r)
